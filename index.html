@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github - Upload Your Projects</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="">Git<span>Hub</span></a>
+            </div>
+            <ul id="navItems">
+                <li><a href="">Home</a></li>
+                <li class="dropdown">
+                    <p onclick="dropdownToggle()">Services <span id="icon">^</span> </p>
+                    <ul id="dropItems" class="showItems">
+                        <li><a href="">Projects Upload</a></li>
+                        <li><a href="">AI Programmer</a></li>
+                        <li><a href="">Code Management</a></li>
+                        <li><a href="">Good Commands</a></li>
+                        <li><a href="">Best Hosting</a></li>
+                        <li><a href="">Most Usable</a></li>
+                    </ul>
+                </li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li class="button"><a href="">Get Started</a></li>
+            </ul>
+            <div id="menuIcon">
+                <span onclick="toggleMenu()">&#9776;</span>
+            </div>
+        </nav>
+
+        <div class="home">
+            <h1>Let's Build From Here, Together Using the Github</h1>
+            <p>Github is the complete developer platform to build, scale and deliver secure software. It Provides
+                service to upload projects with code.</p>
+            <form class="input">
+                <input type="email" placeholder="Email Address">
+                <button type="submit">Signup for Github</button>
+            </form>
+            <div class="downloads">
+                <div>
+                    <p>83+ million</p>
+                    <small>Developers</small>
+                </div>
+                <div>
+                    <p>4+ million</p>
+                    <small>Organizations</small>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+        let dropItems = document.getElementById("dropItems")
+        let navItems = document.getElementById("navItems")
+        let icon = document.getElementById("icon")
+
+        dropItems.style.height = "0px"
+        icon.style.transform = "rotate(180deg)"
+        function dropdownToggle() {
+            if (dropItems.style.height == "0px") {
+                dropItems.style.height = "34vh"
+                icon.style.transform = "rotate(0deg)"
+            }
+            else {
+                dropItems.style.height = "0px"
+                icon.style.transform = "rotate(180deg)"
+            }
+        }
+
+        function toggleMenu() {
+            navItems.classList.toggle("showNavItems")
+        }
+    </script>
+</body>
+
+</html>
